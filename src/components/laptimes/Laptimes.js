@@ -6,7 +6,6 @@ function Laptimes() {
   const [data, setData] = useState([]);
 
   // get the data
-  /*
   useEffect(() => {
     const fetchProcess = async () => {
       try {
@@ -24,27 +23,10 @@ function Laptimes() {
       console.log(error);
     });
   }, []);
-*/
 
-  const DUMMY = [
-    {
-      id: "3016e51a-fce0-4565-ab92-5f9c11bb648d",
-      time: 100008,
-      car: "F10",
-      gameName: "Assetto Corsa",
-      circuit: "Shanghai International Circuit",
-      carCategory: "Formula 1",
-      circuitLayout: "Grand Prix",
-      circuitCountry: "China",
-      carCountry: "Italy",
-      isCarMod: true,
-      isCircuitMod: false,
-    },
-  ];
-
-  const LaptimeList = DUMMY.map((item) => (
+  const LaptimeList = data.map((item) => (
     <LaptimeItem
-      Kay={item.id}
+      key={item.id}
       time={item.time}
       car={item.car}
       gameName={item.gameName}

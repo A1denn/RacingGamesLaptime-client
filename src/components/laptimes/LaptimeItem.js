@@ -2,7 +2,7 @@ import React from "react";
 
 function LaptimeItem(props) {
   return (
-    <li>
+    <li key={props.id}>
       <div>
         <div>{props.time}</div>
         <div>{props.car}</div>
